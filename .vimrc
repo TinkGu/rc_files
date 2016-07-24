@@ -16,6 +16,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat' 
 Plugin 'majutsushi/tagbar'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
