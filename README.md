@@ -64,6 +64,7 @@ run '~/.tmux/plugins/tpm/tpm'
 
 ## YouCompleteMe
 自动补全
+
 `git clone https://github.com/Valloric/YouCompleteMe.git`
 `git submodule update --init --recursive`
 
@@ -71,7 +72,3 @@ run '~/.tmux/plugins/tpm/tpm'
 `sudo apt-get install python-dev python3-dev`
 
 `./install.py --tern-completer --racer-completer`
-
-## 记忆上次退出前编辑位置
-`sudo chown -R {username} {filename}`
-
