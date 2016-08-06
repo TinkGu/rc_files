@@ -1,9 +1,9 @@
 # install
 ## conf vim
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/vimrc > ~/.vimrc`
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc`
 
 ## conf tmux
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/tmux.conf > ~/.tmux.conf`
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.tmux.conf > ~/.tmux.conf`
 
 # fonts
 `git clone https://github.com/powerline/fonts.git`
