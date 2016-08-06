@@ -64,6 +64,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+__git_files () { 
+    _wanted files expl 'local files' _files     
+}
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
