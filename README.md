@@ -1,16 +1,12 @@
-# install
-## conf vim
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc`
-
-## conf tmux
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.tmux.conf > ~/.tmux.conf`
-
-# fonts
+My config files
+---
+# zsh
+## fonts
 `git clone https://github.com/powerline/fonts.git`
 
 `./install.sh`
 
-# zsh
+## zsh-theme
 `curl  https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme > ~/.oh-my-zsh/themes/bullet-train.zsh-theme`
 
 `vim ~/.zshrc`
@@ -24,7 +20,33 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 ```
 
+# vim
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc`
+
+## vundle
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+
+## colors
+`mkdir ~/.vim/colors`
+
+`cp ~/.vim/bundle/Smyck-Color-Scheme ~/.vim/colors`
+
+## YouCompleteMe
+
+`git clone https://github.com/Valloric/YouCompleteMe.git`
+
+`git submodule update --init --recursive`
+
+`sudo apt-get install build-essential cmake`
+
+`sudo apt-get install python-dev python3-dev`
+
+`./install.py --tern-completer --racer-completer`
+
 # tmux
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.tmux.conf > ~/.tmux.conf`
+
+## tpm
 `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
 `vim ~/.tmux.conf`
@@ -55,22 +77,8 @@ run '~/.tmux/plugins/tpm/tpm'
 
 `tmux kill-server`
 
-# .vimrc
-`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-
-## colors
-`mkdir ~/.vim/colors`
-`cp ~/.vim/bundle/Smyck-Color-Scheme ~/.vim/colors`
-
-## YouCompleteMe
-自动补全
-
-`git clone https://github.com/Valloric/YouCompleteMe.git`
-
-`git submodule update --init --recursive`
-
-`sudo apt-get install build-essential cmake`
-
-`sudo apt-get install python-dev python3-dev`
-
-`./install.py --tern-completer --racer-completer`
+# .gitignore
+## node
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore`
+## react
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore`
