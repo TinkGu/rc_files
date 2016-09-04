@@ -1,0 +1,6 @@
+export sml="/usr/local/sml/bin/sml"
+
+alias gitls="git status"
+alias npmls="npm ls --depth=0"
+
+service iptables stop
