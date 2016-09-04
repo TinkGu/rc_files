@@ -77,6 +77,37 @@ run '~/.tmux/plugins/tpm/tpm'
 
 `tmux kill-server`
 
+# atom
+## atom plugins
+* line-ending-selector-unix
+* atom-beautify
+* autocomplete-paths
+* file-icons
+* regex-railroad-diagram
+* symbols-tree-view
+* achievements
+* advanced-open-file
+* hyperclick
+* js-hyperclick
+* project-viewer
+* local-history
+* emmet
+* multi-cursor-plus
+* react
+* react-es6-snippets
+* git-plus
+
+## disable
+* spell check
+* language-xxx
+
+## key mapping
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/atom/keymap.cson > keymap.cson`
+
+## snipptes
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/atom/snippets.cson > snippets.cson`
+
+
 # .gitignore
 ## node
 `curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore`
