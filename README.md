@@ -82,6 +82,7 @@ run '~/.tmux/plugins/tpm/tpm'
 
 # atom
 ## atom plugins
+* activate-power-mode
 * line-ending-selector-unix
 * atom-beautify
 * autocomplete-paths
@@ -94,7 +95,7 @@ run '~/.tmux/plugins/tpm/tpm'
 * js-hyperclick
 * project-viewer
 * local-history
-* emmet[delete its keymaps]
+* emmet **delete its keymaps**
 * multi-cursor-plus
 * [react](https://github.com/orktes/atom-react)
 * react-es6-snippets
