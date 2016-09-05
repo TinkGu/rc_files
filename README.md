@@ -20,6 +20,9 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 ```
 
+## zsh_profile
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.zsh_profile > ~/.zsh_profile`
+
 # vim
 `curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc`
 
@@ -83,7 +86,7 @@ run '~/.tmux/plugins/tpm/tpm'
 * atom-beautify
 * autocomplete-paths
 * file-icons
-* regex-railroad-diagram
+* [regex-railroad-diagram](https://github.com/klorenz/atom-regex-railroad-diagrams)
 * symbols-tree-view
 * achievements
 * advanced-open-file
@@ -91,9 +94,9 @@ run '~/.tmux/plugins/tpm/tpm'
 * js-hyperclick
 * project-viewer
 * local-history
-* emmet
+* emmet[delete its keymaps]
 * multi-cursor-plus
-* react
+* [react](https://github.com/orktes/atom-react)
 * react-es6-snippets
 * git-plus
 
