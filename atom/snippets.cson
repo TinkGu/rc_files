@@ -70,7 +70,11 @@
 
     export default class ${1:MyComponent} extends React.Component {
         render() {
-            return (${2:<div>MyComponent</div>});
+            return (
+                <div>
+
+                </div>
+            )
         }
     }
 
@@ -90,7 +94,11 @@
         }
 
         render() {
-            return (${2:<div>MyComponent</div>});
+            return (
+                <div>
+
+                </div>
+            )
         }
     }
 
@@ -113,8 +121,12 @@
     'body': """
     import React, { PropTypes } from 'react';
 
-    export const ${1} = (props) => {
-        return (${2:<div>MyComponent</div>});
+    export default const ${1} = (props) => {
+        return (
+            <div>
+                
+            </div>
+        );
     }
 
     ${1}.propTypes = {
