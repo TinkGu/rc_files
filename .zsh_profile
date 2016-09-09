@@ -3,4 +3,6 @@ export sml="/usr/local/sml/bin/sml"
 alias gitls="git status"
 alias npmls="npm ls --depth=0"
 
+alias git_set_user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
+
 service iptables stop
