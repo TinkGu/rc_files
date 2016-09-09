@@ -121,7 +121,7 @@
     'body': """
     import React, { PropTypes } from 'react';
 
-    export default ${1} = (props) => {
+    export default function ${1}(props) {
         return (
             <div>
 
