@@ -80,9 +80,10 @@ see [atom.md#plugins](https://github.com/TinkGu/rc_files/tree/master/atom#plugin
 ## snipptes
 `curl https://raw.githubusercontent.com/TinkGu/rc_files/master/atom/snippets.cson > snippets.cson`
 
-
-# .gitignore
-## node
+# git
+`git config --global core.editor vim`
+## .gitignore
+### node
 `curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore`
-## react
+### react
 `curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore`
