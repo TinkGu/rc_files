@@ -10,10 +10,9 @@ Plugin 'Xuyuanp/nerdtree-git-plugin' " show git diff in nerdtree
 Plugin 'vim-airline/vim-airline' " beautify status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim' " find files
-Plugin 'Valloric/YouCompleteMe' " auto complete
 Plugin 'hukl/Smyck-Color-Scheme'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat' 
+Plugin 'tpope/vim-repeat'
 Plugin 'majutsushi/tagbar'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'mattn/emmet-vim'
@@ -300,18 +299,3 @@ if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
 let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = "\u2b60"
-
-" ============== YouCompleteMe ===========
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
-noremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>" "回车即选中当前项
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'nerdtree' : 1,
-      \}
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-" see more
-" http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
