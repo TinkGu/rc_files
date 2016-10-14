@@ -19,9 +19,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 ### fonts
-`git clone https://github.com/powerline/fonts.git`
+* windows
 
-`./install.sh`
+see [this article](http://jack-boy.iteye.com/blog/2154511)
+
+* linux
+
+`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/appearance/fonts-install.sh > font-install.sh`
+
+source it.
 
 ## zsh-theme
 `curl  https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme > ~/.oh-my-zsh/themes/bullet-train.zsh-theme`
