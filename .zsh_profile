@@ -1,8 +1,27 @@
-export sml="/usr/local/sml/bin/sml"
+# alias
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias grep='grep --color=auto'
 
+## git
 alias gitls="git status"
+alias git-set-user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
+
+## node & npm
 alias npmls="npm ls --depth=0"
 
-alias git_set_user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
+# auto sh
+## make git autocomplete faster
+__git_files () {
+   _wanted files expl 'local files' _files
+}
 
+## register sml command
+export sml="/usr/local/sml/bin/sml"
+
+## terminl support 256 color
+export TERM='xterm-256color'
+
+## close firewall
 service iptables stop
