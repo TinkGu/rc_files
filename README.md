@@ -82,8 +82,3 @@ see [atom.md#plugins](https://github.com/TinkGu/rc_files/tree/master/atom#plugin
 
 # git
 `git config --global core.editor vim`
-## .gitignore
-### node
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore`
-### react
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore`
