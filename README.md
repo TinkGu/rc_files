@@ -1,47 +1,16 @@
 My config files
 ---
 # zsh
-## install
-* ubuntu
-```
-apt-get install zsh
-```
+`sh -c "$(curl -fsSL https://github.com/TinkGu/rc_files/blob/master/scripts/preset/zsh-install.sh)"`
 
-## zsh alias and other settings
-```
-curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.zsh_profile > ~/.zsh_profile
-```
-
-## oh-my-zsh
-### install
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-### fonts
+# fonts
 * windows
 
 see [this article](http://jack-boy.iteye.com/blog/2154511)
 
 * linux
 
-`curl https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/appearance/fonts-install.sh > font-install.sh`
-
-source it.
-
-## zsh-theme
-`curl  https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme > ~/.oh-my-zsh/themes/bullet-train.zsh-theme`
-
-`vim ~/.zshrc`
-```
-ZSH_THEME="bullet-train"
-BULLETTRAIN_PROMPT_ORDER=(
-  time
-  git
-  context
-  dir
-)
-```
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/appearance/fonts-install.sh)"`
 
 # tmux
 ## install
