@@ -2,6 +2,7 @@
 
 # install zsh_theme
 if [ ! -e "$HOME/.zsh_theme" ]; then
+    curl  https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme > ~/.oh-my-zsh/themes/bullet-train.zsh-theme
     theme_sh="source ~/.zsh_theme"
     sed -i "/^source.*oh-my-zsh\.sh/i${theme_sh}" ~/.zshrc
 fi
