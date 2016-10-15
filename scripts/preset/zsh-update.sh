@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $HOME
+echo -e "$HOME"
 # install zsh_theme
 if [ ! -e "$HOME/.zsh_theme" ]; then
     echo $HOME
