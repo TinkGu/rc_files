@@ -15,7 +15,8 @@ alias git-ign-react="curl https://raw.githubusercontent.com/TinkGu/rc_files/mast
 alias npmls="npm ls --depth=0"
 
 ## update rc_files
-alias update-zsh="curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh | sh"
+alias update-zsh="source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh)"
+
 # auto sh
 ## make git autocomplete faster
 __git_files () {
