@@ -1,7 +1,7 @@
 My config files
 ---
 # zsh
-`sh -c "$(curl -fsSL https://github.com/TinkGu/rc_files/blob/master/scripts/preset/zsh-install.sh)"`
+`sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-install.sh)"`
 
 # fonts
 * windows
@@ -10,7 +10,7 @@ see [this article](http://jack-boy.iteye.com/blog/2154511)
 
 * linux
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/appearance/fonts-install.sh)"`
+`sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/appearance/fonts-install.sh)"`
 
 # tmux
 ## install
