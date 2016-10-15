@@ -6,6 +6,7 @@ My config files
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-install.sh)"`
 
 * update
+
 `source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh)`
 
 # tmux
