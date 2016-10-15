@@ -14,5 +14,4 @@ if [ ! -e "$HOME/.zsh_profile" ]; then
 fi
 curl https://raw.githubusercontent.com/TinkGu/rc_files/master/zsh/.zsh_profile > ~/.zsh_profile
 
-source $HOME/.zshrc
 echo -e '---\ndone!'
