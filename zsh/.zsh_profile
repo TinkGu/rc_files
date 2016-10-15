@@ -16,6 +16,8 @@ alias npmls="npm ls --depth=0"
 
 ## update rc_files
 alias update-zsh="source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh)"
+alias update-vim="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc"
+alias update-tmux="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.tmux.conf > ~/.tmux.conf"
 
 # auto sh
 ## make git autocomplete faster
@@ -31,3 +33,8 @@ export TERM='xterm-256color'
 
 ## close firewall
 # service iptables stop
+
+# sync rc-files
+update-zsh
+update-vim
+update-tmux
