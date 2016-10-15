@@ -14,6 +14,9 @@ alias git-ign-react="curl https://raw.githubusercontent.com/TinkGu/rc_files/mast
 ## node & npm
 alias npmls="npm ls --depth=0"
 
+## update rc_files
+alias update-zsh="sh -c \"$(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh)\""
+
 # auto sh
 ## make git autocomplete faster
 __git_files () {
@@ -27,4 +30,4 @@ export sml="/usr/local/sml/bin/sml"
 export TERM='xterm-256color'
 
 ## close firewall
-service iptables stop
+# service iptables stop
