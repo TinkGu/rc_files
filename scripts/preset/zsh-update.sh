@@ -15,5 +15,4 @@ fi
 curl https://raw.githubusercontent.com/TinkGu/rc_files/master/zsh/.zsh_profile > ~/.zsh_profile
 
 source ~/.zshrc
----
-echo 'done!'
+echo -e '---\ndone!'
