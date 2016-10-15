@@ -9,6 +9,9 @@ My config files
 
 `source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/zsh-update.sh)`
 
+# git
+`source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/git-preset.sh)`
+
 # tmux
 `source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/rc_files/master/scripts/preset/tmux-install.sh)`
 ## tpm(optional)
