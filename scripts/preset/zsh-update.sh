@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # install zsh_theme
 if [ ! -e "$HOME/.zsh_theme" ]; then
     curl https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme > ~/.oh-my-zsh/themes/bullet-train.zsh-theme
