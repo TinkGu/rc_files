@@ -7,6 +7,9 @@ alias grep='grep --color=auto'
 ## git
 alias gitls="git status"
 alias git-set-user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
+### ignores
+alias git-ign-node="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore"
+alias git-ign-react="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore"
 
 ## node & npm
 alias npmls="npm ls --depth=0"
