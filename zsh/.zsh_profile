@@ -35,6 +35,6 @@ export TERM='xterm-256color'
 # service iptables stop
 
 # sync rc-files
-update-zsh
-update-vim
-update-tmux
+# update-zsh
+# update-vim
+# update-tmux
