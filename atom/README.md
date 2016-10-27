@@ -23,3 +23,7 @@ awesome atom!
 ## please disable
 * spell check
 * language-xxx
+
+## plugins settings
+### find-and-replace
+- [x] Open Project Find Results In Right Pane
