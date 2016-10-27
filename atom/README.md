@@ -19,11 +19,10 @@ awesome atom!
 * [react](https://github.com/orktes/atom-react)
 * react-es6-snippets
 * git-plus
+* highlight-selected
 
 ## please disable
 * spell check
 * language-xxx
 
 ## plugins settings
-### find-and-replace
-- [x] Open Project Find Results In Right Pane
