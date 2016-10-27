@@ -20,6 +20,8 @@ awesome atom!
 * react-es6-snippets
 * git-plus
 * highlight-selected
+* single-click-open
+* split-diff
 
 ## please disable
 * spell check
