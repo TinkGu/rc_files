@@ -301,3 +301,12 @@ endif
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = "\u2b60"
 
+" =============  tmuxline ===============
+let g:tmuxline_preset = { 
+      \'a'      : '#S',
+      \'win'    : '#I:#(echo "#{pane_current_path}")',
+      \'cwin'   : '#I:#W #F',
+      \'x'      : '%R',
+      \'y'      : 'npm: v#(npm -v)',
+      \'z'      : 'node: #(node -v)',
+      \'options': {'status-justify' : 'left'}}
