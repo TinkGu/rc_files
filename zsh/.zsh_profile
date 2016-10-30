@@ -19,6 +19,9 @@ alias update-zsh="source <(curl -fsSL https://raw.githubusercontent.com/TinkGu/r
 alias update-vim="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.vimrc > ~/.vimrc"
 alias update-tmux="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/.tmux.conf > ~/.tmux.conf"
 
+## tmux
+alias rtmux="tmux refresh-client -S" # refresh tmux
+
 # auto sh
 ## make git autocomplete faster
 __git_files () {
