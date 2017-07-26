@@ -2,22 +2,22 @@ awesome atom!
 ---
 # plugins
 * activate-power-mode
-* line-ending-selector-unix
 * atom-beautify
+* atom-typescript
 * autocomplete-paths
+* busy-signal
+* editorconfig
+* emmet **delete its keymaps**
 * file-icons
-* [regex-railroad-diagram](https://github.com/klorenz/atom-regex-railroad-diagrams)
+* highlight-selected
 * hyperclick
 * js-hyperclick
-* local-history
-* emmet **delete its keymaps**
 * language-babel
-* git-plus
-* highlight-selected
-* split-diff
-
-## please disable
-* spell check
-* language-xxx
-
-## plugins settings
+* language-graphql
+* language-vue
+* line-ending-selector-unix
+* linter
+* linter-eslint
+* linter-ui-default
+* local-history
+* [regex-railroad-diagram](https://github.com/klorenz/atom-regex-railroad-diagrams)
