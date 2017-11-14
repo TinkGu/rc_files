@@ -10,6 +10,8 @@ alias grep='grep --color=auto'
 ## git
 alias gitls="git status"
 alias git-set-user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
+alias pullmst="git pull origin master"
+alias pushmst="git push origin master"
 
 ## node & npm
 alias npmls="npm ls --depth=0"
