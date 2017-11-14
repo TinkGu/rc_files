@@ -1,4 +1,7 @@
-# alias
+# =================
+# alias && command
+# =================
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -7,9 +10,6 @@ alias grep='grep --color=auto'
 ## git
 alias gitls="git status"
 alias git-set-user="git config user.name TinkGu && git config user.email tlwrite@126.com && git config -l"
-### ignores
-alias git-ign-node="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore"
-alias git-ign-react="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore"
 
 ## node & npm
 alias npmls="npm ls --depth=0"
@@ -22,22 +22,53 @@ alias update-tmux="curl https://raw.githubusercontent.com/TinkGu/rc_files/master
 ## tmux
 alias rtmux="tmux refresh-client -S" # refresh tmux
 
+## update this file
+alias vbashrc='vim ~/.zsh_profile'
+alias wbashrc='source ~/.zsh_profile'
+
+## 查看所有被占用的端口
+function ports() { lsof -Pni4 | grep LISTEN }
+
+## react
+### react native 模拟器调试
+alias add-expo="xcrun simctl install booted ~/dev/env/Exponent-1.20.2.tar"
+
+# ===========
+# pull files
+# ===========
+
+## ignores
+alias git-ign-node="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/node.ignore > .gitignore"
+alias git-ign-react="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/gitignores/react.ignore > .gitignore"
+
+## editorconfig
+alias pl-editorcfg="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/rcfiles/editorconfig/js > .editorconfig"
+
+## eslintrc
+alias pl-eslint="curl https://raw.githubusercontent.com/TinkGu/rc_files/master/rcfiles/eslint/airbnb-standard > .eslintrc.js"
+
+# ========
 # auto sh
+# ========
+
 ## make git autocomplete faster
 __git_files () {
    _wanted files expl 'local files' _files
 }
 
+## load cd alias
+if [ ! -e "$HOME/.zsh_cd" ]; then
+    source ~/.zsh_cd
+fi
+
 ## register sml command
-export sml="/usr/local/sml/bin/sml"
+# export sml="/usr/local/sml/bin/sml"
 
 ## terminl support 256 color
 export TERM='xterm-256color'
 
+## proxy
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+
 ## close firewall
 # service iptables stop
-
-# sync rc-files
-# update-zsh
-# update-vim
-# update-tmux
