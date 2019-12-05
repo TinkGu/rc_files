@@ -4,18 +4,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter' " show git diff info
-Plugin 'scrooloose/nerdtree' " show files tree
-Plugin 'Xuyuanp/nerdtree-git-plugin' " show git diff in nerdtree
 Plugin 'vim-airline/vim-airline' " beautify status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim' " find files
 Plugin 'hukl/Smyck-Color-Scheme'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'majutsushi/tagbar'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -276,21 +270,6 @@ cnoremap <C-e> <End>
 " =====================================
 " ============== plugins ==============
 " =====================================
-
-" ============== nerdTree =============
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " 关闭最后一个文件时同时关闭tree
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ } " set nerdtree-git-tags-symbols
 
 " ============== vim-airline =============
 let g:airline_theme="papercolor"
