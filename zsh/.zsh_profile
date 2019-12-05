@@ -34,7 +34,7 @@ alias vbashcd='vim ~/.zsh/.zsh_cd'
 # ========
 
 # load .zsh_cd
-if [ ! -e "$HOME/.zsh/.zsh_cd" ]; then
+if [ -e "$HOME/.zsh/.zsh_cd" ]; then
     source ~/.zsh/.zsh_cd
 fi
 
@@ -69,6 +69,12 @@ function ports() { lsof -Pni4 | grep LISTEN }
 
 # cheat
 export CHEAT_CONFIG_PATH="~/.cheat/conf.yml"
+function ct() {
+  cheat $1 -c | less -R
+}
+
+# myip
+alias myip="ipconfig getifaddr en0"
 
 # ========
 # environments
