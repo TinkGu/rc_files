@@ -59,7 +59,6 @@ export TERM='xterm-256color'
 
 # ccat
 source ~/.zsh/ccat.sh
-alias cat="ccat"
 
 # cd 书签服务
 source ~/.zsh/m.sh
