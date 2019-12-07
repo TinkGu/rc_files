@@ -1,0 +1,93 @@
+#!/bin/bash
+config_file="$HOME/.alasrc"
+pre_dic="/usr/local/bin"
+cmd_name=$1
+cmds_group=$2
+cmd_file="$pre_dic/$cmd_name"
+opt_name=$2
+opt_file="$pre_dic/$opt_name"
+
+generate_file(){
+    if [ ! -x "$config_file" ]; then
+        touch "$config_file"
+        chmod +x "$config_file"
+    fi
+}
+
+add_alias(){
+    # 使可以交互, 如果已存在, 询问是否替换
+    if [ -a "$cmd_file" ]; then
+        echo "this alias exists, please use [alas -d $cmd_name] to del it"
+    else
+       touch $cmd_file
+       chmod +x $cmd_file
+       echo "$cmds_group" >> $cmd_file
+       echo "alias $cmd_name=\"$cmds_group\"" >> $config_file
+    fi
+}
+
+search_alias(){
+  if [ -a $opt_file ]; then
+      cat $opt_file
+  else
+      echo "no such alias called $opt_name"
+  fi
+}
+
+delete_alias(){
+    if [ -a $opt_file ]; then
+        rm -rf $opt_file
+        line_nu=`grep -n "alias $opt_name" $config_file | cut -d ":" -f 1`
+        sed -i '' $line_nu"d" $config_file
+    else
+        echo "no such alias called $opt_name"
+    fi
+}
+
+list_alias(){
+    lines=`cat $config_file|wc -l`
+    if [ $lines -eq 0 ]; then
+        echo -e "nothing setted for you! \nplease use [alas alias_name \"cmds_group\"] to add one"
+    else
+        echo "your aliases: $lines"
+        cat $config_file
+    fi
+}
+
+show_usage(){
+    echo "alas is an another alias but working forever
+    alas alias_name \"command_groups\": set an alias forever
+    -l        list all your alias commands
+    -d name   delete a alias called \$name
+    -s name   show this alias's usage
+    -h        show this message"
+}
+
+generate_file
+while getopts :d:s:lh arg
+do
+    case $arg in
+        d)
+            delete_alias
+            exit 1
+            ;;
+        s)
+            search_alias
+            exit 1
+            ;;
+        l)
+            list_alias
+            exit 1
+            ;;
+        h)
+            show_usage
+            exit 1
+            ;;
+        ?)
+            echo "unkonw option! please use alas in this way."
+            show_usage
+            exit 1
+            ;;
+    esac
+done
+add_alias
