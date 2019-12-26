@@ -3,7 +3,7 @@ ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   time
   git
-  context
+#  context
   dir
 )
 

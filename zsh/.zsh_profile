@@ -18,19 +18,20 @@ alias git-set-user="git config user.name TinkGu && git config user.email tlwrite
 # node & npm
 alias npmls="npm ls --depth=0"
 alias npmi="npm install"
+alias npmrm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # nginx
 alias cdnginx="cd /usr/local/etc/nginx"
 alias ednginx="atom /usr/local/etc/nginx/nginx.conf"
 alias reset-nginx="nginx -c /usr/local/etc/nginx/nginx.conf.default && nginx -s reload"
 
-# operate this file
+# update this file
 alias vbashrc='vim ~/.zsh/.zsh_profile'
 alias wbashrc='source ~/.zsh/.zsh_profile'
 alias vbashcd='vim ~/.zsh/.zsh_cd'
 
 # ========
-# auto sh
+# auto sh and tools
 # ========
 
 # load .zsh_cd
@@ -54,25 +55,23 @@ __git_files () {
 ## terminl support 256 color
 export TERM='xterm-256color'
 
-# close firewall
-# service iptables stop
-
 # ccat
 source ~/.zsh/ccat.sh
 
 # cd 书签服务
 source ~/.zsh/m.sh
 
+# ct cheatsheet 速查表服务
+export CHEATSHEET_CONFIG_PATH="$HOME/Documents/notes/cheatsheet"
+source ~/.zsh/ct.sh
+
+## close firewall
+# service iptables stop
+
 # 查看所有被占用的端口
 function ports() { lsof -Pni4 | grep LISTEN }
 
-# cheat
-export CHEAT_CONFIG_PATH="~/.cheat/conf.yml"
-function ct() {
-  cheat $1 -c | less -R
-}
-
-# myip
+# ip
 alias myip="ipconfig getifaddr en0"
 
 # ========
@@ -96,3 +95,8 @@ export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 if [ -d $HOME/Library/Python/2.7/bin ]; then
     export PATH=$HOME/Library/Python/2.7/bin:$PATH
 fi
+
+# 通过代理高速下载 github release 文件
+function wget2() {
+  wget $1 -e use_proxy=yes -e http_proxy=127.0.0.1:1087
+}
