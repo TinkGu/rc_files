@@ -12,6 +12,12 @@ homebrew
 /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)"
 ```
 
+nvm
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
+
 # Optional Applications
 
 ## tmux
