@@ -12,7 +12,7 @@ mkdir -p ~/.zsh
 curl -fLO --output-dir ~/.zsh https://raw.githubusercontent.com/TinkGu/rc_files/master/zsh/ccat.sh
 curl -fLO --output-dir ~/.zsh https://raw.githubusercontent.com/TinkGu/rc_files/master/zsh/m.sh
 curl -fLO --output-dir ~/.zsh https://raw.githubusercontent.com/TinkGu/rc_files/master/zsh/.zsh_profile
-touch ~/.zsh/.zshcd
+touch ~/.zsh/.zsh_cd
 
 # plugins
 ## zsh-asg
