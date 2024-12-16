@@ -1,5 +1,9 @@
-export ZSH=/Users/tink/.oh-my-zsh
-source ~/.zsh/.zsh_theme
-plugins=(git, z)
-source $ZSH/oh-my-zsh.sh
+
+source ~/.zsh/ccat.sh
+source ~/.zsh/m.sh
 source ~/.zsh/.zsh_profile
+source ~/.zsh/.zsh_cd
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+eval "$(starship init zsh)" # keep this line end

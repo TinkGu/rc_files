@@ -1,4 +1,4 @@
-## cat 染色 https://zhuanlan.zhihu.com/p/49552439
+# cat 染色 https://zhuanlan.zhihu.com/p/49552439
 function ccat() {
     local style="monokai"
     if [ $# -eq 0 ]; then

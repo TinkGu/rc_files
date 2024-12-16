@@ -2,6 +2,9 @@
 # alias && command
 # =================
 
+alias ls='ls --color=tty'
+alias ll='ls -lh'
+alias la='ls -lAh'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -17,62 +20,49 @@ alias git-set-user="git config user.name TinkGu && git config user.email tlwrite
 
 # node & npm
 alias npmls="npm ls --depth=0"
-alias npmi="npm install"
 alias npmrm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # nginx
 alias cdnginx="cd /usr/local/etc/nginx"
-alias ednginx="atom /usr/local/etc/nginx/nginx.conf"
+alias ednginx="code /usr/local/etc/nginx/nginx.conf"
 alias reset-nginx="nginx -c /usr/local/etc/nginx/nginx.conf.default && nginx -s reload"
 
 # update this file
-alias vbashrc='vim ~/.zsh/.zsh_profile'
+alias vbashrc='code ~/.zsh/.zsh_profile'
 alias wbashrc='source ~/.zsh/.zsh_profile'
-alias vbashcd='vim ~/.zsh/.zsh_cd'
+alias vbashcd='code ~/.zsh/.zsh_cd'
+
+# utils
+alias myip="ipconfig getifaddr en0"
+# 查看所有被占用的端口
+function ports() { lsof -Pni4 | grep LISTEN }
 
 # ========
 # auto sh and tools
 # ========
 
-# load .zsh_cd
-if [ -e "$HOME/.zsh/.zsh_cd" ]; then
-    source ~/.zsh/.zsh_cd
-fi
+# if [ -e "$HOME/.zsh/.zsh_cd" ]; then
+#    source ~/.zsh/.zsh_cd
+# fi
 
 # tmux
-alias rtmux="tmux refresh-client -S" # refresh tmux
-function tpl() {
-  tmux new-window -c $1
-  tmux split-window -h -c $1
-}
+# alias rtmux="tmux refresh-client -S" # refresh tmux
+# function tpl() {
+#   tmux new-window -c $1
+#   tmux split-window -h -c $1
+# }
+
+# 设置 tab 补全时，忽略大小写
+autoload -Uz compinit && compinit -u
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 # make git autocomplete faster
 __git_files () {
    _wanted files expl 'local files' _files
 }
 
-# iterm
-## terminl support 256 color
-export TERM='xterm-256color'
-
-# ccat
-source ~/.zsh/ccat.sh
-
-# cd 书签服务
-source ~/.zsh/m.sh
-
-# ct cheatsheet 速查表服务
-export CHEATSHEET_CONFIG_PATH="$HOME/Documents/notes/cheatsheet"
-source ~/.zsh/ct.sh
-
 ## close firewall
 # service iptables stop
-
-# 查看所有被占用的端口
-function ports() { lsof -Pni4 | grep LISTEN }
-
-# ip
-alias myip="ipconfig getifaddr en0"
 
 # ========
 # environments
@@ -82,10 +72,8 @@ alias myip="ipconfig getifaddr en0"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-[[ -s "/Users/tink/.gvm/scripts/gvm" ]] && source "/Users/tink/.gvm/scripts/gvm"
-
-# sml
-# export sml="/usr/local/sml/bin/sml"
+# terminl support 256 color
+export TERM='xterm-256color'
 
 # electron
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
@@ -100,3 +88,10 @@ fi
 function wget2() {
   wget $1 -e use_proxy=yes -e http_proxy=127.0.0.1:1087
 }
+
+# homebrew
+export HOMEBREW_NO_INSTALL_FROM_API=True
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
